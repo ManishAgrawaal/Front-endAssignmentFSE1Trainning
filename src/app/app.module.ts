@@ -13,6 +13,7 @@ import { UserhomeComponent } from './user/userhome/userhome.component';
 import { ManageproductComponent } from './admin/manageproduct/manageproduct.component';
 import { ManagereportComponent } from './admin/managereport/managereport.component';
 import { UserregistrationComponent } from './user/userregistration/userregistration.component';
+import { ManageorderComponent } from './admin/manageorder/manageorder.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserregistrationComponent } from './user/userregistration/userregistrat
     UserhomeComponent,
     ManageproductComponent,
     ManagereportComponent,
-    UserregistrationComponent
+    UserregistrationComponent,
+    ManageorderComponent
   ],
   imports: [
     BrowserModule,
