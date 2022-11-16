@@ -14,6 +14,9 @@ import { ManageproductComponent } from './admin/manageproduct/manageproduct.comp
 import { ManagereportComponent } from './admin/managereport/managereport.component';
 import { UserregistrationComponent } from './user/userregistration/userregistration.component';
 import { ManageorderComponent } from './admin/manageorder/manageorder.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,11 @@ import { ManageorderComponent } from './admin/manageorder/manageorder.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

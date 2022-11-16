@@ -1,4 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
+
+
+
 
 @Component({
   selector: 'app-adminlogin',
@@ -6,10 +10,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent implements OnInit {
+  
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
