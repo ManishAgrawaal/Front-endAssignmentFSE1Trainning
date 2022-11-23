@@ -14,11 +14,11 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Product Name</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="productname"  />
+                            <input [(ngModel)]="productstbls.productname" type="text" class="form-control" name="productname"  />
                         </div>
                         <label class="col-sm-2 col-form-label">Product Desc</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="productdesc"  />
+                            <input [(ngModel)]="productstbls.productdesc" type="text" class="form-control" name="productdesc"  />
                         </div>
                             
                     </div>
@@ -27,11 +27,11 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Price</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="price"  /></div>
+                            <input [(ngModel)]="productstbls.price" type="text" class="form-control" name="price"  /></div>
                         
                             <label class="col-sm-2 col-form-label">Features</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="features"  /></div>
+                                <input [(ngModel)]="productstbls.features" type="text" class="form-control" name="features"  /></div>
                          
                     </div>
                     
@@ -47,7 +47,7 @@
                     </div>
                     
                     <div class="text-center" >
-                        <button type="submit"  class="btn btn-primary">Submit</button>
+                        <button type="submit"  class="btn btn-primary" (click)="AddProduct()" >Submit</button>
                     </div>
             </form>
                 </div>
@@ -75,18 +75,18 @@
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                     </tr>
-                   <tr>
-                        <td>1</td>
-                        <td>abc  </td>
-                        <td>500</td>
-                        <td>600</td>
-                        <td>800</td>
+                   <tr *ngFor="let prod of getData">
+                        <td>{{prod.id}}</td>
+                        <td>{{prod.productname}}</td>
+                        <td>{{prod.productdesc}}</td>
+                        <td>{{prod.price}}</td>
+                        <td>{{prod.features}}</td>
                         <td>Active</td>
                    
                         <td>
                             
                             &nbsp;&nbsp;
-                            <button type="submit"  class="btn btn-outline-warning rounded-btn">
+                            <button type="submit"  class="btn btn-outline-warning rounded-btn"  (click)="DeleteAirline(prod)">
                                 <i class="fa fa-trash"></i>
                             </button>
                         </td>

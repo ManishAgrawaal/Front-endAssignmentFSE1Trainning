@@ -1,5 +1,5 @@
 
-export class productstbl
+export class Productstbl
 {
     id: number=0;
     productname:string='';

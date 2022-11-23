@@ -5,7 +5,7 @@
       <div class="col-12">
         <div class="card shadow border-primary" style="padding:30px" >
           <form class="row">
-            <div class="col-12 text-center text-primary mb-2"><h5>-Your great stores and great choices-</h5></div>
+            <div class="col-12 text-center text-white bg-dark mb-2"><h5>-Your great stores and great choices-</h5></div>
             <div class="col-6">
                     <div class="input-group">
                       <!--<div class="input-group-prepend">
@@ -31,7 +31,7 @@
                     <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
                 </div>            </div>-->
             <div class="col-6">
-                <button type="Submit" class="block btn-primary">Search Product</button>
+                <button type="Submit" class="block btn-success ">Search Product</button>
             </div>
           </form>
         </div>
@@ -40,23 +40,12 @@
   </div>
   <br>
   <div class="container">
-    <div class="row">
-      <div class="col-sm border text-center pt-4 pb-4">
-        <h5>Samsung Galaxy</h5>
-        <h5>Price:Rs.25000</h5>
+    <div class="row" >
+      <div class="col-md-3 border text-center pt-4 pb-4 bg-primary" *ngFor="let prod of getData">
+        <h5>{{prod.productname}}</h5>
+        <h5>Price:{{prod.price}}</h5>
         <button>Book</button>
-      </div>
-      <div class="col-sm border text-center pt-4 pb-4">
-        <h5>Denim T-shirt</h5>
-        <h5>Price:Rs.27000</h5>
-        <button>Book</button>
-      </div>
-      <div class="col-sm border text-center pt-4 pb-4">
-        <h5>Shoes</h5>
-        <h5>Price:Rs.10000</h5>
-        <button>Book</button>
-      </div>
-     
+      </div>     
     </div>
   </div>
 <br>
