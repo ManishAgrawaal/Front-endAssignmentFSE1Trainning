@@ -5,7 +5,7 @@ import { userstbl } from 'src/app/models/adminlogin.model'
 @Component({
   selector: 'app-adminlogin',
   templateUrl: './adminlogin.component.html',
-  styleUrls: ['./adminlogin.component.css']
+  //styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent implements OnInit {
 
@@ -15,4 +15,6 @@ export class AdminloginComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+
 }

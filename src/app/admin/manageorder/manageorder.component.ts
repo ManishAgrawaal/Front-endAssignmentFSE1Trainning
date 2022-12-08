@@ -19,7 +19,8 @@ export class ManageorderComponent implements OnInit {
   ShowData()
   {
     console.log("hi");
-    this.http.get("https://localhost:44346/api/OrderHistory/ViewDetails")
+    //this.http.get("https://localhost:44346/api/OrderHistory/ViewDetails")
+    this.http.get("https://localhost:44346/api/MainOrder/all")
   
     .subscribe(res => this.GetFromServer(res), res=>console.log(res));
   }  
@@ -33,5 +34,7 @@ export class ManageorderComponent implements OnInit {
  
   getData: Array<Ordertbl>= new Array<Ordertbl>();
 
+  
+  
 
 }

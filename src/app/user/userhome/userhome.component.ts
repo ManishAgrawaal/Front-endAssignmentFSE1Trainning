@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BookOrdertbl } from 'src/app/models/bookorder.model';
+import { Ordertbl } from 'src/app/models/manageorder.model';
 import { Productstbl } from 'src/app/models/manageproduct.model';
 
 @Component({
@@ -32,6 +34,23 @@ export class UserhomeComponent implements OnInit {
   productstbls:Productstbl=new Productstbl();
  
   getData: Array<Productstbl>= new Array<Productstbl>();
+
+  bookordertbls:BookOrdertbl=new BookOrdertbl();
+  
+
+  BookProduct() {
+    var addData = {
+      
+      productid:Number(this.bookordertbls.productid),
+      customerid:Number(this.bookordertbls.customerid)
+    }
+    console.log(addData);
+    console.log(this.bookordertbls);
+    this.http.post("https://localhost:44346/api/Order/add", addData)
+    .subscribe(res => { console.log(res) }, res => console.log(res));
+    this.bookordertbls= new BookOrdertbl();
+  
+  }  
 
 
 }
